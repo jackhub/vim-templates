@@ -272,7 +272,7 @@ function <SID>InitializeTemplate(...)
     let l:fileparts = []
     if (a:0 == 0)
         " get filename and extension
-        let l:fileparts = add(l:fileparts, expand('%')) " full file name
+        let l:fileparts = add(l:fileparts, expand('%:t')) " file tail
         let l:fileparts = add(l:fileparts, expand('%:e')) " file extension
     else
         let l:fileparts = add(l:fileparts, a:1)
